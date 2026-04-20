@@ -28,25 +28,29 @@ X=np.array([1,2,3,4,5])
 Y=np.array([2,4,5,4,5])
 x_mean=np.mean(X)
 y_mean=np.mean(Y)
-num=np.sum((X-x_mean)*(Y-y_mean))
-den=np.sum((X-x_mean)**2)
 m=num/den
 c=y_mean-m*x_mean
-print("Slope(m):",m)
+num=np.sum((X-x_mean)*(Y-y_mean))
+den=np.sum((X-x_mean)**2)
+print("slope(m):",m)
 print("Intercept(c):",c)
-Y_predict=m*X+c
-plt.scatter(X,Y,label="Data points")
-plt.plot(X,Y_predict,label="Bestfit line")
+Y_pred=m*X+c
+x=int(input("Enter the value"))
+y=m*float(x)+c
+print("Value:",y)
+plt.scatter(X,Y,label="Datapoints")
+plt.plot(X,Y_pred,label="Best fit line")
 plt.xlabel("X")
 plt.ylabel("Y")
-plt.title("UNIVARIATE LINEAR REGRESSION")
 plt.legend()
+plt.title("Univariate linear regression")
 plt.show() 
 */
 ```
 
 ## Output:
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d304b38d-83bb-4ea4-9590-3b888b133312" />
+<img width="707" height="532" alt="image" src="https://github.com/user-attachments/assets/35cd64af-be4c-4cf1-9e19-0099b4284a13" />
+
 
 
 
